@@ -4,21 +4,30 @@ const parseXMLtoJSON = require('./lib/parseXMLtoJSON').parseXMLtoJSON
 const convertSitemapToArrayOfUrls = require('./lib/parseXMLtoJSON').convertSitemapToArrayOfUrls
 const xml = require('../TestData/testdata').xml
 
+const findUltimateUrls = arr => {
+  console.log(arr)
+  const hmm = arr.map(item => item.split('/'))
+  console.log(hmm.map((a, i) => {
+    // console.log(a)
+    return `${a[0]}//${a[1]}/${a[2]}/${i === 1 ? a[3] : hmm[0][3]}`
+  }))
+  return 'hello world'
+}
+
   ; (async () => {
-    // console.log('Fetching sitemap.xml')
-    console.log('Parsing to json')
     try {
-      const result = await parseXMLtoJSON(xml)
-      console.log(result)
-      console.log(typeof result)
-      console.log(convertSitemapToArrayOfUrls(result))
+      console.log('Parsing to json')
+      const json = await parseXMLtoJSON(xml)
+      console.log('Extract urls')
+      const arr = convertSitemapToArrayOfUrls(json)
+      const listOfUrlToFetch = findUltimateUrls(arr)
+      console.log(listOfUrlToFetch)
     } catch (e) {
       console.log(e)
     }
 
   })()
 
-// console.log('Extract urls')
 
 // console.log('Crawling site')
 

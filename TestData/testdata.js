@@ -10,13 +10,13 @@ const xml = `
   <url>
     <lastmod>2020-05-06</lastmod>
   <loc>
-    https://example.com/annan
+    https://example.com/artikel/annan
   </loc>
   </url>
   <url>
     <lastmod>2020-05-06</lastmod>
   <loc>
-    https://example.com/tredje
+    https://example.com/artikel/tredje
   </loc>
   </url>
 </urlset>

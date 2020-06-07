@@ -1,5 +1,8 @@
-const xml = require('../../testdata').xml
-const parseXMLtoJSON = require('../lib/parseXMLtoJSON')
+const xml = require('../../TestData/testdata').xml
+const brokenXml = require('../../TestData/testdata').brokenXml
+
+const parseXMLtoJSON = require('../lib/parseXMLtoJSON').parseXMLtoJSON
+const convertSitemapToArrayOfUrls = require('../lib/parseXMLtoJSON').convertSitemapToArrayOfUrls
 
 describe("Parsing xml to json tests", () => {
   test("Testdata to be string", () => {
@@ -11,8 +14,15 @@ describe("Parsing xml to json tests", () => {
     expect(typeof result).toBe('object')
   })
 
-  test("Expect lengt of object to be NUMBER", async () => {
+  test('Expecting to get an array of urls', async () => {
     const result = await parseXMLtoJSON(xml)
-    // expect(result.length).toBe(4)
+    const urlList = await convertSitemapToArrayOfUrls(result)
+
+    expect(Array.isArray(urlList))
+      .toBe(true)
+
+    expect(urlList.length)
+      .toBe(3)
   })
+
 })

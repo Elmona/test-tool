@@ -25,4 +25,10 @@ const options = {
 const parseXMLtoJSON = async xml =>
   await parser.parse(xml, options)
 
-module.exports = parseXMLtoJSON
+const convertSitemapToArrayOfUrls = body =>
+  body.urlset.url.map(url => url.loc)
+
+module.exports = {
+  parseXMLtoJSON,
+  convertSitemapToArrayOfUrls,
+}

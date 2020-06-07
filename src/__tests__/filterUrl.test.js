@@ -29,6 +29,8 @@ describe('Testing the filter function', () => {
     ])
   })
 
+  // TODO: Write unit test to add funcationality to get random routes for maximum coverage 
+
   test('Every route should be unique', () => {
     const result = filterUrl(testArray)
 

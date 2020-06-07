@@ -23,13 +23,8 @@ describe('Testing the filter function', () => {
 
     expect(result).toBe([
       'https://www.example.com',
-      'https://www.example.com/artikel',
       'https://www.example.com/artikel/forsta',
-      'https://www.example.com/artikel/om',
       'https://www.example.com/artikel/om/forsta',
-      'https://www.example.com/a',
-      'https://www.example.com/a/b',
-      'https://www.example.com/a/b/c',
       'https://www.example.com/a/b/c/d/e',
     ])
   })
@@ -54,7 +49,6 @@ describe('Testing the filter function', () => {
 
     expect(result).toBe([
       'http://www.test.com/artikel/andra',
-      'http://www.test.com/artikel',
       'http://www.test.com/',
 
     ])

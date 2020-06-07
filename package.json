@@ -1,0 +1,22 @@
+{
+  "name": "sitemapcrawler",
+  "version": "1.0.0",
+  "author": {
+    "name": "Elmona"
+  },
+  "license": "MIT",
+  "description": "",
+  "scripts": {
+    "start": "func start",
+    "node": "node src/app.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^3.17.3",
+    "he": "^1.2.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}

@@ -9,7 +9,7 @@
  * @param {String} replacedomain Replace domain name in url
  * @returns {[]} Array of filtered urls
  */
-const filterUrl = (arr, replacedomain = null) => {
+const filterUrl = arr => {
   // TODO
   return []
 }

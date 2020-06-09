@@ -10,7 +10,7 @@ describe('Testing the replace domain name function', () => {
     ]
     const result = replaceDomainName(testArray, 'http://www.test.com')
 
-    expect(result).toBe([
+    expect(result).toEqual([
       'http://www.test.com/artikel/andra',
       'http://www.test.com/',
     ])

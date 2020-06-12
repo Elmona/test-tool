@@ -9,12 +9,22 @@ const convertResult = arr => arr.map(item => {
   }
 })
 
+const timeout = (ms, url, promise) => {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve({ url: url, status: 'timeout' })
+    }, ms)
+    promise.then(resolve, reject)
+  })
+}
+
 const fetchUrls = async arr => {
-  const arrayOfFunctions = arr.map(url => fetch(url, {
-    headers: {
-      'User-Agent': 'SitemapCrawler'
-    }
-  }))
+  const arrayOfFunctions = arr.map(url => timeout(5000, url,
+    fetch(url, {
+      headers: {
+        'User-Agent': 'SitemapCrawler'
+      }
+    })))
 
   // TODO: If the array is to big we should not send all att once.
 

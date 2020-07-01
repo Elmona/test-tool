@@ -1,5 +1,5 @@
 {
-  "name": "sitemapcrawler",
+  "name": "test-tool",
   "version": "1.0.0",
   "author": {
     "name": "Elmona"
@@ -7,8 +7,8 @@
   "license": "MIT",
   "description": "",
   "scripts": {
-    "start": "func start",
-    "node": "node src/app.js",
+    "start": "node src/app.js",
+    "azureFunction": "func start",
     "test": "jest"
   },
   "dependencies": {

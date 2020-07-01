@@ -3,7 +3,7 @@
 const fetch = require('node-fetch')
 
 const sendWebhook = async (url, message) => {
-  await fetch(url, {
+  return await fetch(url, {
     headers: {
       'Content-Type': 'application/json',
     },

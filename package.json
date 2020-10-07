@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
     "fast-xml-parser": "^3.17.3",
     "he": "^1.2.0",
     "node-fetch": "^2.6.0"

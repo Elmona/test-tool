@@ -4,6 +4,7 @@
 Regression testing is boring, this is a tool to automate manual tests. When you build a website every URI should work. There are several ways you can use this tooling to make sure every URI returns the right status code.
 
 # Installation
+  
 ## Prerequisites
 ```
 npm
